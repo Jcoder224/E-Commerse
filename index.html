@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple E-Commerce Site</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <h1>My E-Commerce Store</h1>
+        <nav>
+            <a href="#products">Products</a>
+            <a href="#cart">Cart (<span id="cart-count">0</span>)</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Products</h2>
+        <section id="products">
+            <div class="product" data-id="1">
+                <img src="https://cdn.pixabay.com/photo/2016/11/18/13/47/apple-1834639_1280.jpg" alt="Product 1">
+                <h3>Apple</h3>
+                <p>₹10.00</p>
+                <button onclick="addToCart(1, 'Apple', 10)">Add to Cart</button>
+            </div>
+            <div class="product" data-id="2">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFKr8gdT34VL57UFVlrxkEvooIoIEBfaCryogP2CKtK7c-JKs6_8q-hT3k-_8y3gIHgPU&usqp=CAU" alt="product 2">
+                <h3>Banana</h3>
+                <p>₹20.00</p>
+                <button onclick="addToCart(2, 'Banana', 20)">Add to Cart</button>
+            </div>
+            <div class="product" data-id="3">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyI8Ku-BWxg8R9HI4u2MY00g8Fz5MhcTnl01_enCZuN3op7Q6wnbXrjbk62wUCBY67zH0&usqp=CAU" alt="Product 3">
+                <h3>Mango</h3>
+                <p>₹30.00</p>
+                <button onclick="addToCart(3, 'Mango', 30)">Add to Cart</button>
+            </div>
+            <div class="product" data-id="4">
+                <img src="https://media.istockphoto.com/id/477836156/photo/orange-fruit-isolated-on-white.jpg?s=612x612&w=0&k=20&c=NQYciPqF0kRqnDMx7Vy96Qhtx2c37OiKPXtjMR3Oy-Y=" alt="Product 4">
+                <h3>Orange</h3>
+                <p>₹40.00</p>
+                <button onclick="addToCart(4, 'Orange', 40)">Add to Cart</button>
+            </div>
+            <div class="product" data-id="5">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ7ev5KbCsyLuOU8MHmPIi1UKg8uJkX3p_-w&s" alt="Product 5">
+                <h3>Coconut Water</h3>
+                <p>₹50.00</p>
+                <button onclick="addToCart(5, 'Coconut Water', 50)">Add to Cart</button>
+            </div>
+            <div class="product" data-id="6">
+                <img src="https://organicmandya.com/cdn/shop/files/Watermelon.jpg?v=1721378496&width=1000" alt="Product 6">
+                <h3>WaterMelon</h3>
+                <p>₹60.00</p>
+                <button onclick="addToCart(6, 'WaterMelon', 60)">Add to Cart</button>
+            </div>
+        </section>
+
+        <section id="cart">
+            <h2>Shopping Cart</h2>
+            <ul id="cart-items"></ul>
+            <p>Total: ₹<span id="cart-total">0.00</span></p>
+            <button >Pay</button>
+        </section>
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
